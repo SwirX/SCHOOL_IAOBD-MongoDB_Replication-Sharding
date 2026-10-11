@@ -1,0 +1,47 @@
+# Jeu de réplicas MongoDB à 3 membres (rs0) — projet M201
+# Lancer : docker compose up -d
+services:
+  mongo1:
+    image: mongo:7
+    container_name: mongo1
+    hostname: mongo1
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo1-data:/data/db
+    networks:
+      - mongo-net
+
+  mongo2:
+    image: mongo:7
+    container_name: mongo2
+    hostname: mongo2
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo2-data:/data/db
+    networks:
+      - mongo-net
+
+  mongo3:
+    image: mongo:7
+    container_name: mongo3
+    hostname: mongo3
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+    ports:
+      - "27019:27017"
+    volumes:
+      - mongo3-data:/data/db
+    networks:
+      - mongo-net
+
+volumes:
+  mongo1-data:
+  mongo2-data:
+  mongo3-data:
+
+networks:
+  mongo-net:
+    driver: bridge
