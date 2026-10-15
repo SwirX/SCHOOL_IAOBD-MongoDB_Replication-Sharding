@@ -6,9 +6,9 @@ Projet pratique sur la haute disponibilité et le passage à l'échelle avec Mon
 
 ## 👥 Membres du trinôme
 
-- **Ali Bouyakhsass**
-- **Fatima Zahra Bayouni**
-- **Khalid El Hamraoui**
+- **Ali Bouyakhsass** [@SwirX](https://github.com/SwirX)
+- **Fatima Zahra Bayouni** [@fz-bayouni](https://github.com/fz-bayouni)
+- **Khalid El Hamraoui** [@khalid-el-hamraoui](https://github.com/khalid-el-hamraoui)
 
 **Formateur :** M. Abderrahman SALHI
 
